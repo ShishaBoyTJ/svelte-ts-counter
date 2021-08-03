@@ -1,6 +1,6 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
-  import InputText from "../parts/InputText.svelte"
+  import InputText from "../parts/inputText.svelte"
   import Button from "../parts/Button.svelte"
   // import { count } from '../../store/count';
   // let defaultTitle = 'new'
