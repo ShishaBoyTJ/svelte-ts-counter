@@ -1,4 +1,4 @@
-import IndexPage from "../components/pages/index.svelte"
+import IndexPage from "../components/pages/Index.svelte"
 export const routes = {
   '/': IndexPage,
 }
