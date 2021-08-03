@@ -2,25 +2,24 @@
   import { createEventDispatcher } from 'svelte';
   import InputText from "../parts/inputText.svelte"
   import Button from "../parts/Button.svelte"
-  // import { count } from '../../store/count';
-  // let defaultTitle = 'new'
-  // let count = 0;
+  
   const dispatch = createEventDispatcher();
   export let index :number;
   export let count :number;
   export let title :string;
+
   const onClickIncrement = () => {
-    // count.update(n => n + 1);
     count += 1
   };
+
   const onClickDecriment = () => {
-    // count.update(n => n - 1);
     count -= 1
   }
+
   const onClickReset = () => {
-    // count.set(0)
     count = 0
   }
+
   const onClickDelete = () => {
     count += 1
     const value = {
