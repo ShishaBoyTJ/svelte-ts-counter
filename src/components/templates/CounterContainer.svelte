@@ -1,8 +1,8 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
-  import InputText from "../parts/inputText.svelte"
+  import InputText from "../parts/InputText.svelte"
   import Button from "../parts/Button.svelte"
-  
+
   const dispatch = createEventDispatcher();
   export let index :number;
   export let count :number;
