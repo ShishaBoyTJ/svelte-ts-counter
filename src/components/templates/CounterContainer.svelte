@@ -33,7 +33,7 @@
   }
 </script>
 
-<div class="flex my-4 container">
+<div class="flex container">
   <InputText bind:value={title} class="mx-8 mxr-auto"/>
   {count}
   <div class="flex mx-8 mxl-auto">
@@ -49,9 +49,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin:auto;
 }
 .my-4{
-  margin:4px 0;
+  margin-top:4px;
+  margin-bottom:4px;
 }
 .mx-8{
   margin:0 8px;

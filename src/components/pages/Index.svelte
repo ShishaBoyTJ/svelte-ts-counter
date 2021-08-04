@@ -35,8 +35,8 @@ const handleOnClickDelete = (value :any) => {
 }
 
 </script>
-<div class="center">
-  <div>
+<div class="center mb-8">
+  <div class="center mb-8">
     {#each $counterList as item, index}
       <CounterContainer index={index} bind:title={item.title}  bind:count={item.count} on:delete={e => handleOnClickDelete(e.detail)}/>
     {/each}
@@ -50,7 +50,7 @@ const handleOnClickDelete = (value :any) => {
     </p>
     {/each}
   </div>
-  <p>
+  <p class="my-8">
     some of count:{countSum}
   </p>
 </div>
@@ -62,6 +62,13 @@ const handleOnClickDelete = (value :any) => {
 }
 .center{
   text-align:center;
+}
+.mb-8{
+  margin-bottom: 8px;
+}
+.my-8{
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 .mx-4{
   margin:0 4px;
