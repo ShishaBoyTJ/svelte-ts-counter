@@ -44,13 +44,13 @@ const onClickDeleteAllCounter = () => {
     <div class="my-8"></div>
     <Button on:click={onClickDeleteAllCounter} class="button-bar--red" value={"delete all counter"}/>
   </div>
-  <div class="flex">
-    title list:
-    {#each reactiveCounterList as item}
+  <div class="flex max-w-full">
     <p class="mx-4">
-      {item.title}
+      title list:
+      {#each reactiveCounterList as item}
+        {item.title}
+      {/each}
     </p>
-    {/each}
   </div>
   <p class="my-8">
     some of count:{countSum}
@@ -61,18 +61,5 @@ const onClickDeleteAllCounter = () => {
 .flex{
   display: flex;
   justify-content: center;
-}
-.center{
-  text-align:center;
-}
-.mb-8{
-  margin-bottom: 8px;
-}
-.my-8{
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-.mx-4{
-  margin:0 4px;
 }
 </style>

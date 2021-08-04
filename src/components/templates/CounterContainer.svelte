@@ -31,7 +31,7 @@
   }
 </script>
 
-<div class="flex container">
+<div class="flex mx-auto container">
   <InputText bind:value={title} class="mx-8 mxr-auto"/>
   {count}
   <div class="flex mx-8 mxl-auto">
@@ -47,18 +47,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin:auto;
 }
-.mx-8{
-  margin:0 8px;
-}
-:global(.mxr-auto){
-  margin:0 auto 0 0 ;
-}
-.mxl-auto{
-  margin:0 0 0 auto;
-}
-
 .container{
   --bg-opacity: 1;
   background-color: rgba(247,250,252,var(--bg-opacity));
