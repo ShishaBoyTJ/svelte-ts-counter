@@ -4,9 +4,7 @@
   export { clazz as class };
 </script>
 
-<div class="">
-  <button class={`button ${clazz || ''} ${$$props.class}`} on:click>{value}</button>
-</div>
+<button class={`button ${clazz || ''} ${$$props.class}`} on:click>{value}</button>
 
 <style>
   .button{

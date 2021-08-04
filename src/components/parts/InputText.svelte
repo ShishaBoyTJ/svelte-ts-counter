@@ -4,7 +4,7 @@
   export { clazz as class };
 </script>
 
-  <input bind:value={value}  class={`title ${clazz || ''}`} type="text">
+<input bind:value={value}  class={`title ${clazz || ''}`} type="text">
 
 <style>
   .title{

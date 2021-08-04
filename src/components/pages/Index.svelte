@@ -36,25 +36,25 @@ const handleOnClickDelete = (value :any) => {
 
 </script>
 <div class="center">
-<div class="">
-  {#each $counterList as item, index}
-    <CounterContainer index={index} bind:title={item.title}  bind:count={item.count} on:delete={e => handleOnClickDelete(e.detail)}/>
-  {/each}
-  <Button on:click={onClickAddCounterContainer} class="button-bar--green"/>
-</div>
-<div class="flex">
-  title list:
-  {#each reactiveCounterList as item}
-  <p class="mx-4">
-    {item.title}
+  <div>
+    {#each $counterList as item, index}
+      <CounterContainer index={index} bind:title={item.title}  bind:count={item.count} on:delete={e => handleOnClickDelete(e.detail)}/>
+    {/each}
+    <Button on:click={onClickAddCounterContainer} class="button-bar--green"/>
+  </div>
+  <div class="flex">
+    title list:
+    {#each reactiveCounterList as item}
+    <p class="mx-4">
+      {item.title}
+    </p>
+    {/each}
+  </div>
+  <p>
+    some of count:{countSum}
   </p>
-  {/each}
 </div>
-<p>
-some of count:{countSum}
-</p>
-</div>
-<!-- </div> -->
+
 <style>
 .flex{
   display: flex;

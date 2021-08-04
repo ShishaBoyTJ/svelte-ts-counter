@@ -1,6 +1,4 @@
 import { writable, derived } from "svelte/store";
-
-// export const counterList =
 interface defaultCounterList {
   title:string,
   count:number
