@@ -48,7 +48,7 @@ const onClickDeleteAllCounter = () => {
     <p class="mx-4">
       title list:
       {#each reactiveCounterList as item}
-        {item.title}
+        {item.title},&thinsp;
       {/each}
     </p>
   </div>
