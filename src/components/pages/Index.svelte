@@ -25,22 +25,24 @@ const onClickAddCounterContainer = () => {
 }
 
 const handleOnClickDelete = (value :any) => {
-
-  // FIXME 下記の処理だとよくない
-  // NOTE value.countが0の時リストが消えないので手を加えた
-
-  countSum = countSum - value.count 
-  countSum += 1
   $counterList.splice(value.index, 1)
+  $counterList = $counterList
+}
+
+const onClickDeleteAllCounter = () => {
+  $counterList.splice(0)
+  $counterList = $counterList
 }
 
 </script>
 <div class="center mb-8">
   <div class="center mb-8">
-    {#each $counterList as item, index}
+    {#each reactiveCounterList as item, index}
       <CounterContainer index={index} bind:title={item.title}  bind:count={item.count} on:delete={e => handleOnClickDelete(e.detail)}/>
     {/each}
-    <Button on:click={onClickAddCounterContainer} class="button-bar--green"/>
+    <Button on:click={onClickAddCounterContainer} class="button-bar--green" />
+    <div class="my-8"></div>
+    <Button on:click={onClickDeleteAllCounter} class="button-bar--red" value={"Delete all counter"}/>
   </div>
   <div class="flex">
     title list:

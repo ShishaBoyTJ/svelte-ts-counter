@@ -46,4 +46,12 @@
     width:100%;
     padding:2px;
   }
+  .button-bar--red{
+    max-width: 24rem;
+    background-color: #f56565;
+    border-radius: .25rem;
+    cursor: pointer;
+    width:100%;
+    padding:2px;
+  }
 </style>
