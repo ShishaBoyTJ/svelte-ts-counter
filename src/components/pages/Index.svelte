@@ -42,7 +42,7 @@ const onClickDeleteAllCounter = () => {
     {/each}
     <Button on:click={onClickAddCounterContainer} class="button-bar--green" />
     <div class="my-8"></div>
-    <Button on:click={onClickDeleteAllCounter} class="button-bar--red" value={"Delete all counter"}/>
+    <Button on:click={onClickDeleteAllCounter} class="button-bar--red" value={"delete all counter"}/>
   </div>
   <div class="flex">
     title list:
