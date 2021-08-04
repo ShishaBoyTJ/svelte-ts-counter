@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Router from "svelte-spa-router"
 	import { routes } from "./router/index"
+	import "./assets/mixin.css";
 </script>
 
 <main>
