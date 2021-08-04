@@ -3,6 +3,7 @@ import CounterContainer from "../templates/CounterContainer.svelte";
 import Button from "../parts/Button.svelte"
 import { counterList } from "../../store/counterList"
 import _ from "lodash"
+
 interface defaultCounterList {
   title:string,
   count:number
@@ -25,23 +26,44 @@ const onClickAddCounterContainer = () => {
 
 const handleOnClickDelete = (value :any) => {
 
-  // @note value.countが0の時リストが消えないので手を加えた
+  // FIXME 下記の処理だとよくない
+  // NOTE value.countが0の時リストが消えないので手を加えた
+
   countSum = countSum - value.count 
   countSum += 1
   $counterList.splice(value.index, 1)
 }
 
 </script>
-
+<div class="center">
 <div class="">
   {#each $counterList as item, index}
-    {index}<CounterContainer index={index} bind:title={item.title}  bind:count={item.count} on:delete={e => handleOnClickDelete(e.detail)}/>
+    <CounterContainer index={index} bind:title={item.title}  bind:count={item.count} on:delete={e => handleOnClickDelete(e.detail)}/>
   {/each}
-  <Button on:click={onClickAddCounterContainer}/>
-  {#each reactiveCounterList as item}
-    {item.title}
-    {item.count}
-  {/each}
-  some of count:{countSum}
+  <Button on:click={onClickAddCounterContainer} class="button-bar--green"/>
 </div>
-<style></style>
+<div class="flex">
+  title list:
+  {#each reactiveCounterList as item}
+  <p class="mx-4">
+    {item.title}
+  </p>
+  {/each}
+</div>
+<p>
+some of count:{countSum}
+</p>
+</div>
+<!-- </div> -->
+<style>
+.flex{
+  display: flex;
+  justify-content: center;
+}
+.center{
+  text-align:center;
+}
+.mx-4{
+  margin:0 4px;
+}
+</style>
