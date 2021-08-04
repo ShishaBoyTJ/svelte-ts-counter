@@ -23,13 +23,11 @@
   }
 
   const onClickDelete = () => {
-    count += 1
     const value = {
       count,
       index
     }
     dispatch('delete', value)
-    count = 0
   }
 </script>
 
@@ -50,10 +48,6 @@
   justify-content: center;
   align-items: center;
   margin:auto;
-}
-.my-4{
-  margin-top:4px;
-  margin-bottom:4px;
 }
 .mx-8{
   margin:0 8px;
