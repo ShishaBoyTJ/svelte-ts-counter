@@ -16,20 +16,19 @@
 
   $: reactiveCounterList = $counterList;
 
-  $: countSum = $counterList.reduce(function (
-    sum: number,
-    element: defaultCounterList,
-  ) {
-    return sum + element.count;
-  },
-  0);
+  $: countSum = $counterList.reduce(
+    (sum: number, element: defaultCounterList) => {
+      return sum + element.count;
+    },
+    0,
+  );
 
   const onClickAddCounterContainer = () => {
     $counterList = [...$counterList, _.cloneDeep(counterConstant)];
   };
 
-  const handleOnClickDelete = (value: any) => {
-    $counterList.splice(value.index, 1);
+  const handleOnClickDelete = (idx: number) => {
+    $counterList.splice(idx, 1);
     $counterList = $counterList;
   };
 

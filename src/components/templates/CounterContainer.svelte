@@ -23,11 +23,8 @@
   };
 
   const onClickDelete = () => {
-    const value = {
-      count,
-      index,
-    };
-    dispatch('delete', value);
+    const idx = index;
+    dispatch('delete', idx);
   };
 </script>
 
