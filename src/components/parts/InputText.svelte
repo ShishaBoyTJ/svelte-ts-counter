@@ -1,9 +1,19 @@
 <script lang="ts">
-  export let value="";
+  export let value = '';
+  let clazz: any;
+  export { clazz as class };
 </script>
 
-<div class="">
-  <input bind:value={value}  class="title" type="text">
-</div>
+<input bind:value class={`title ${clazz || ''}`} type="text" />
 
-<style lang="scss"></style>
+<style>
+  .title {
+    --text-opacity: 1;
+    color: #718096;
+    color: rgba(113, 128, 150, var(--text-opacity));
+    width: 8rem;
+    /* margin:0; */
+    padding: 0 0.25rem;
+    border: none;
+  }
+</style>
